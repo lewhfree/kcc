@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 project(kcc C CXX)
 
@@ -20,7 +20,7 @@ add_definitions("-DKCC_DEFAULT_PREPROCESSOR=\"${KCC_DEFAULT_PREPROCESSOR}\"")
 
 find_package(BISON REQUIRED)
 find_package(FLEX REQUIRED)
-find_package(Boost REQUIRED)
+find_package(Boost CONFIG REQUIRED)
 
 if (KCC_DOCUMENTATION)
     find_program(SCDOC NAMES scdoc REQUIRED)
